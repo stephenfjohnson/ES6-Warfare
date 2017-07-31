@@ -1,0 +1,13 @@
+{
+  "name": "steve",
+  "version": "1.0.0",
+  "description": "Browser Reloading",
+  "repository": "Master",
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "browser-sync start --directory --server --files './wizard-wars/**'"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13"
+  }
+}

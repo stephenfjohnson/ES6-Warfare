@@ -1,0 +1,85 @@
+body {
+  background: #222;
+  min-height: 100vh;
+  height: 100%;
+  font-family: 'UnifrakturMaguntia', cursive;
+  color: white;
+}
+
+header {
+  text-align: center;
+  width: 100%;
+  padding: 40px 0;
+  font-size: 50px;
+  letter-spacing: 5px;
+}
+
+.battlefield {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*font-family: 'UnifrakturMaguntia', cursive;*/
+  font-family: 'Megrim', cursive;
+}
+
+.fighter {
+  padding: 20px;
+}
+
+button {
+  background: red;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.animate-draw {
+  fill: #aa7f3d;
+  fill: url("#goldGradent");
+  stroke: #EEBE7B;
+  stroke-miterlimit: 5;
+  fill-opacity: 0;
+
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration: 1;
+
+  animation-name: DrawLine, FadeStroke, FillIn;
+  animation-duration: 4s, 1s, 1s;
+  animation-delay: 0s, 3.5s, 3.5s;
+}
+
+#drawViking1Top, #drawViking2Top {
+  stroke-dasharray: 1100;
+  stroke-dashoffset: 1100;
+}
+
+#drawViking1Middle, #drawViking2Middle {
+  animation-delay: 1s, 3.5s, 3.5s;
+  animation-duration: 3.5s, 1s, 1s;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 1500;
+}
+
+/*#drawWizard1Bottom, #drawViking1Bottom {
+  animation-delay: 2s, 3.5s, 3.5s;
+  animation-duration: 2s, 1s, 1s;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation-duration: 4s;
+}*/
+
+
+@keyframes DrawLine {
+  to { stroke-dashOffset: 0; }
+}
+
+@keyframes FadeStroke {
+  to { stroke-opacity: 0; }
+}
+
+@keyframes FillIn {
+  from { fill-opacity: 0; }
+  to { fill-opacity: 1; }
+}
