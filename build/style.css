@@ -1,7 +1,5 @@
 body {
   background: #222;
-  min-height: 100vh;
-  height: 100%;
   font-family: 'UnifrakturMaguntia', cursive;
   color: white;
 }
@@ -9,14 +7,14 @@ body {
 header {
   text-align: center;
   width: 100%;
-  padding: 40px 0;
+  padding: 20px 0;
   font-size: 50px;
   letter-spacing: 5px;
 }
 
 .battlefield {
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
   justify-content: center;
   /*font-family: 'UnifrakturMaguntia', cursive;*/
   font-family: 'Megrim', cursive;

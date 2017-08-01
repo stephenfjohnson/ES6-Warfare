@@ -1,11 +1,11 @@
 {
-  "name": "steve",
+  "name": "warfare",
   "version": "1.0.0",
   "description": "Browser Reloading",
   "repository": "Master",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "scripts": {
-    "start": "browser-sync start --directory --server --files './wizard-wars/**'"
+    "start": "browser-sync start --directory --server --files './build/**'"
   },
   "devDependencies": {
     "browser-sync": "^2.18.13"
