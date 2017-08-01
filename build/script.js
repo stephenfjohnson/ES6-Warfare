@@ -7,6 +7,7 @@ function add(items) {
 // Returns random number between 1 and 100
 function randomNumber() {
   const number = Math.floor(Math.random() * 100 + 1);
+  console.log(`Random Number ${number}`);
   return number;
 }
 
@@ -25,7 +26,8 @@ class Fighter {
       console.log(`Ouch ${this.name} got hit 🔪 ${this.health}hp left 😵`);
       return `Ouch ${this.name} got hit 🔪 ${this.health}hp left 😵` ;
     }
-    return this.health;
+    console.log(`Health 💉 ${this.health}`);
+    return `Health 💉 ${this.health}`;
   }
   powerUp(powerType) {
     this.power.push(powerType);
@@ -36,6 +38,7 @@ class Fighter {
       console.log(`${this.name} is dead but here is his stats: ${add(this.power)} power points 💫 and has ${this.health}hp ⛑`);
       return `${this.name} is dead but here is his stats: ${add(this.power)} power points 💫 and has ${this.health}hp ⛑`;
     } else {
+      // console.log(`${this.name} has ${add(this.power)} power points 💫 and has ${this.health}hp ⛑`);
       console.log(`${this.name} has ${add(this.power)} power points 💫 and has ${this.health}hp ⛑`);
       return `${this.name} has ${add(this.power)} power points 💫 and has ${this.health}hp ⛑`;
     }
@@ -59,8 +62,8 @@ class God extends Fighter {
   }
   equipWeapon() {
     // this.staff = 'Mjolnir';
-    console.log(`${this.name} has ${this.type}! ⚡️`);
-    return `${this.name} has ${this.type}! ⚡️`;
+    console.log(`${this.name} has his ${this.type}! ⚡️`);
+    return `${this.name} has his ${this.type}! ⚡️`;
     // return this.staff;
   }
 }
@@ -68,15 +71,8 @@ class God extends Fighter {
 // const thor = new Fighter('Thor');
 const thor = new God('Thor', 'Mjolnir');
 const loki = new God('Loki', 'Chitauri Scepter');
-thor.equipWeapon();
 loki.powerUp(randomNumber());
-thor.powerUp(randomNumber());;
-loki.wasHit();
-thor.wasHit();
-loki.info();
-thor.info();
-thor.win();
-loki.win();
+thor.powerUp(randomNumber());
 
 const thorText = `
   <p>${thor.equipWeapon()}</p>
