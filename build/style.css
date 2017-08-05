@@ -12,7 +12,7 @@ header {
   letter-spacing: 5px;
 }
 
-.battlefield {
+#battlefield {
   display: flex;
   /*align-items: center;*/
   justify-content: center;

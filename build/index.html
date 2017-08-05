@@ -14,7 +14,7 @@
   <header>
     <h1>ES6 Warfare</h1>
   </header>
-  <main class="battlefield">
+  <main id="battlefield">
     <div class="fighter">
       <svg id="viking1SVG" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -33,9 +33,11 @@
           <use id="drawViking1Middle" class="animate-draw" xlink:href="#viking1Middle" />
         </svg>
       </svg>
-      <div id="viking1"></div>
-      <button>Power Up</button>
-      <button>Attack</button>
+      <div id="viking1">
+        <h3>Thor Odinson</h3>
+      </div>
+      <button onclick="setTimeout(alive, 300)">Power Up</button>
+      <button onclick="logThis(randomNumber())">Attack</button>
     </div>
     <div class="fighter">
       <svg id="viking2SVG" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
@@ -56,10 +58,10 @@
         </svg>
       </svg>
       <div id="viking2">
-        <h3>The Viking 2</h3>
+        <h3>Loki of Asgard</h3>
       </div>
       <button>Power Up</button>
-      <button>Attack</button>
+      <button onclick="logThis(randomNumber(), 'Loki')">Attack</button>
     </div>
   </main>
 <script src="script.js" charset="utf-8"></script>
